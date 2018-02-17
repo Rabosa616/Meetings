@@ -3,9 +3,48 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27413.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{B359C765-5403-4176-ADC0-21E8F858C836}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commands", "Commands", "{2B20D88A-C208-4F76-AB1B-AC837BB2F094}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Events", "Events", "{22D4EB1E-C6D8-4FD9-BD58-0D64A6791C31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bus", "Bus", "{52465F9E-40B9-40E8-89EC-CD1F3E119273}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{7FAA4CBF-7896-4A4C-A674-835FC68A83B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS-ES.Commands", "Commands\CQRS-ES.Commands\CQRS-ES.Commands.csproj", "{72B08AA4-CD2F-4AEC-8D8A-E87649CC8FCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS-ES.Events", "Events\CQRS-ES.Events\CQRS-ES.Events.csproj", "{D8D677E5-B0CA-4182-B51E-93F92DF2E601}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS-ES.Models.WriteModels", "Models\CQRS-ES.Models.WriteModels\CQRS-ES.Models.WriteModels.csproj", "{1BBE8233-4F8F-4E7E-B384-AEF8B0424BB4}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72B08AA4-CD2F-4AEC-8D8A-E87649CC8FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72B08AA4-CD2F-4AEC-8D8A-E87649CC8FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72B08AA4-CD2F-4AEC-8D8A-E87649CC8FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72B08AA4-CD2F-4AEC-8D8A-E87649CC8FCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8D677E5-B0CA-4182-B51E-93F92DF2E601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8D677E5-B0CA-4182-B51E-93F92DF2E601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8D677E5-B0CA-4182-B51E-93F92DF2E601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8D677E5-B0CA-4182-B51E-93F92DF2E601}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BBE8233-4F8F-4E7E-B384-AEF8B0424BB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BBE8233-4F8F-4E7E-B384-AEF8B0424BB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BBE8233-4F8F-4E7E-B384-AEF8B0424BB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BBE8233-4F8F-4E7E-B384-AEF8B0424BB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{72B08AA4-CD2F-4AEC-8D8A-E87649CC8FCE} = {2B20D88A-C208-4F76-AB1B-AC837BB2F094}
+		{D8D677E5-B0CA-4182-B51E-93F92DF2E601} = {22D4EB1E-C6D8-4FD9-BD58-0D64A6791C31}
+		{1BBE8233-4F8F-4E7E-B384-AEF8B0424BB4} = {B359C765-5403-4176-ADC0-21E8F858C836}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A2973BE3-4FA5-4966-A09F-51F93DCDA00A}
