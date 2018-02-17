@@ -11,12 +11,12 @@ namespace CQRS_ES.Events.Employees
         public readonly string JobTitle;
         public readonly string Email;
 
-        public EmployeeCreatedEvent(Guid id, 
-                                    int employeeID, 
-                                    string firstName, 
-                                    string lastName, 
-                                    DateTime dateOfBirth, 
-                                    string jobTitle, 
+        public EmployeeCreatedEvent(Guid id,
+                                    int employeeID,
+                                    string firstName,
+                                    string lastName,
+                                    DateTime dateOfBirth,
+                                    string jobTitle,
                                     string email)
         {
             Id = id;

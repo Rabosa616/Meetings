@@ -6,6 +6,7 @@ namespace CQRS_ES.Events.Meetings
 {
     public class MeetingCreatedEvent : BaseEvent
     {
+        public readonly Guid MeetingId;
         public readonly DateTime Begin;
         public readonly DateTime End;
         public readonly string Subject;
@@ -13,15 +14,17 @@ namespace CQRS_ES.Events.Meetings
         public readonly Guid Organizer;
         public readonly bool IsPrivate;
 
-        public MeetingCreatedEvent(Guid id, 
-                                   DateTime begin, 
-                                   DateTime end, 
-                                   string subject, 
-                                   string description, 
-                                   Guid organizer, 
+        public MeetingCreatedEvent(Guid id,
+                                   Guid meetingId,
+                                   DateTime begin,
+                                   DateTime end,
+                                   string subject,
+                                   string description,
+                                   Guid organizer,
                                    bool isPrivate)
         {
             Id = id;
+            MeetingId = meetingId;
             Begin = begin;
             End = end;
             Subject = subject;

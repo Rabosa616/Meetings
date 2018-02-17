@@ -4,6 +4,7 @@ namespace CQRS_ES.Events.Rooms
 {
     public class RoomCreatedEvent : BaseEvent
     {
+        public readonly Guid RoomId;
         public readonly string Name;
         public readonly string Description;
         public readonly int Capacity;
@@ -12,14 +13,16 @@ namespace CQRS_ES.Events.Rooms
         public readonly string Email;
 
         public RoomCreatedEvent(Guid id, 
-                               string name, 
-                               string description, 
-                               int capacity, 
-                               bool hasTV, 
-                               bool hasBeamer, 
-                               string email)
+                                Guid roomId,
+                                string name, 
+                                string description, 
+                                int capacity, 
+                                bool hasTV, 
+                                bool hasBeamer, 
+                                string email)
         {
             Id = id;
+            RoomId = roomId;
             Name = name;
             Description = description;
             Capacity = capacity;
