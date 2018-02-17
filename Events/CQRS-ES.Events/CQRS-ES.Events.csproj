@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>CQRS_ES.Events</AssemblyName>
+    <RootNamespace>CQRS_ES.Events</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

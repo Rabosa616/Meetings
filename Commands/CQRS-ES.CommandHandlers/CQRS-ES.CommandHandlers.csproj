@@ -2,12 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <RootNamespace>CQRS_ES.Models.WriteModels</RootNamespace>
-    <AssemblyName>CQRS_ES.Models.WriteModels</AssemblyName>
+    <AssemblyName>CQRS_ES.CommandHandlers</AssemblyName>
+    <RootNamespace>CQRS_ES.CommandHandlers</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="CqrsLite" Version="0.19.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CQRS-ES.Commands\CQRS-ES.Commands.csproj" />
   </ItemGroup>
 
 </Project>
