@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using CQRS_ES.Events.Rooms;
 using CQRSlite.Domain;
 
 namespace CQRS_ES.Models.WriteModels
@@ -24,6 +25,7 @@ namespace CQRS_ES.Models.WriteModels
             _hasBeamer = hasBeamer;
             _email = email;
             _meetings = new List<Guid>();
+            ApplyChange(new RoomCreatedEvent(id, name, description, capacity, hasTV, hasBeamer, email));
         }
     }
 }

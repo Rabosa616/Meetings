@@ -1,4 +1,5 @@
 ﻿using System;
+using CQRS_ES.Events.Employees;
 using CQRSlite.Domain;
 
 namespace CQRS_ES.Models.WriteModels
@@ -12,8 +13,6 @@ namespace CQRS_ES.Models.WriteModels
         private string _jobTitle;
         private string _email;
 
-        private Employee() { }
-
         public Employee(Guid id, int employeeID, string firstName, string lastName, DateTime dateOfBirth, string jobTitle, string email)
         {
             Id = id;
@@ -23,6 +22,8 @@ namespace CQRS_ES.Models.WriteModels
             _dateOfBirth = dateOfBirth;
             _jobTitle = jobTitle;
             _email = email;
+
+            ApplyChange(new EmployeeCreatedEvent(id, employeeID, firstName, lastName, dateOfBirth, jobTitle, email));
         }
     }
 }

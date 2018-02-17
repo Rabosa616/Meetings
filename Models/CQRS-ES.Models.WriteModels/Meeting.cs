@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using CQRS_ES.Events.Meetings;
 using CQRSlite.Domain;
 
 namespace CQRS_ES.Models.WriteModels
@@ -25,6 +26,7 @@ namespace CQRS_ES.Models.WriteModels
             _organizer = organizer;
             _isPrivate = isPrivate;
             _attendees = new List<Guid>();
+            ApplyChange(new MeetingCreatedEvent(id, begin, end, subject, description, organizer, isPrivate));
         }
     }
 }
